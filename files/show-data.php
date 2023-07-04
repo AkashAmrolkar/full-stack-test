@@ -128,8 +128,14 @@ li.list {
 	rotate: 45deg;
 }
 .mobile-view{
-        display: none;
-    }
+    display: none;
+}
+.accordion-collapse.show {
+    height: 250px;
+}
+button.accordion-button {
+    background: #fff !important;
+}
 @media only screen and (max-width:767px){
     .tabing-section{
         display: none;
@@ -323,7 +329,7 @@ li.list {
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-heading<?php echo $listItems['caregory'] ?>">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse<?php echo $listItems['caregory'] ?>" aria-expanded="true" aria-controls="panelsStayOpen-collapse<?php echo $listItems['caregory'] ?>">
-                <li class="list" id="<?php echo $listItems['caregory'] ?>" data-attr="<?php echo $listItems['caregory'] ?>">
+                <p class="list" id="<?php echo $listItems['caregory'] ?>" data-attr="<?php echo $listItems['caregory'] ?>">
                     <a href="show-data.php?id=<?php echo $listItems['caregory']?>" class="fs-3 fw-light text-decoration-none list-link" data-toggle="tab">
                         <?php 
                         if($listItems['caregory']=='cat1'){
@@ -345,7 +351,7 @@ li.list {
                         ?> 
                         <?php echo $listItems['caregory']?>
                     </a>
-                </li>
+                    </p>
                 </button>
                 </h2>
                 <div id="panelsStayOpen-collapse<?php echo $listItems['caregory'] ?>" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading<?php echo $listItems['caregory'] ?>">
@@ -361,7 +367,7 @@ li.list {
                             // echo "id: " . $row["id"]. " - Name: " . $row["first_name"]. " " . $row["last_name"]. "<br>";
 
                         ?>
-                        <div class="carousel-cell">
+                        <div class="carousel-cell"  style ='background: url(<?php echo $row2["filename"] ?>); background-size: cover; background-repeat: no-repeat'>
                             <div class="card shadow-sm p-4 mx-3 border-0 rounded-3">
                                 <div class="img-box">
                                     <img class="card-img-top" src="<?php echo $row2["filename"] ?>" alt="Card image cap">
