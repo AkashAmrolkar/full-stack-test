@@ -367,7 +367,7 @@ button.accordion-button {
                             // echo "id: " . $row["id"]. " - Name: " . $row["first_name"]. " " . $row["last_name"]. "<br>";
 
                         ?>
-                        <div class="carousel-cell"  style ='background: url(<?php echo $row2["filename"] ?>); background-size: cover; background-repeat: no-repeat'>
+                        <div class="carousel-cell">
                             <div class="card shadow-sm p-4 mx-3 border-0 rounded-3">
                                 <div class="img-box">
                                     <img class="card-img-top" src="<?php echo $row2["filename"] ?>" alt="Card image cap">
